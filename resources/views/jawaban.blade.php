@@ -2,8 +2,6 @@
 
 @section('content')
 <?php
-mysql_connect("localhost", "root", "");
-mysql_select_db("db_soal");
 
 if (isset($_POST['submit'])) {
     $pilihan = $_POST["pilihan"];
@@ -16,7 +14,7 @@ if (isset($_POST['submit'])) {
     $kosong = 0;
 
     for ($i = 0; $i < $jumlah; $i++) {
-        //id nomor soal
+
         $nomor = $id_soal[$i];
 
         //jika user tidak memilih jawaban
@@ -39,10 +37,7 @@ if (isset($_POST['submit'])) {
                 $salah++;
             }
         }
-        /*RUMUS
-                Jika anda ingin mendapatkan Nilai 100, berapapun jumlah soal yang ditampilkan 
-                hasil= 100 / jumlah soal * jawaban yang benar
-                */
+
 
 
 

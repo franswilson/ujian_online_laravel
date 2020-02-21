@@ -13,6 +13,7 @@
 
 Route::get('/soal', 'SoalController@getSoal');
 Route::get('/jawaban', 'SoalController@getJawaban');
+Route::get('/data_nilai', 'NilaiController@index');
 
 Route::get('/', function () {
     return view('ujian');

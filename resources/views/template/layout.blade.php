@@ -9,7 +9,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" href="images/favicon.ico" type="image/ico" />
 
-  <title>pretest! | </title>
+  <title>UJIAN ONLINE LARAVEL</title>
 
   <!-- Bootstrap -->
   <link href="{{asset('assets/vendors/bootstrap/dist/css/bootstrap.min.css') }}" rel="stylesheet">
@@ -19,6 +19,12 @@
   <link href="{{asset('assets/vendors/nprogress/nprogress.css') }}" rel="stylesheet">
   <!-- iCheck -->
   <link href="{{asset('assets/vendors/iCheck/skins/flat/green.css') }}" rel="stylesheet">
+  <!-- TABLE -->
+  <link href="{{asset('assets/vendors/datatables.net-bs/css/dataTables.bootstrap.min.css') }}" rel="stylesheet">
+  <link href="{{asset('assets/vendors/datatables.net-fixedheader-bs/css/fixedHeader.bootstrap.min.css') }}" rel="stylesheet">
+  <link href="{{asset('assets/vendors/datatables.net-responsive-bs/css/responsive.bootstrap.min.css') }}" rel="stylesheet">
+
+
 
   <!-- bootstrap-progressbar -->
   <link href="{{asset('assets/vendors/bootstrap-progressbar/css/bootstrap-progressbar-3.3.4.min.css') }}" rel="stylesheet">
@@ -44,12 +50,8 @@
 
           <!-- menu profile quick info -->
           <div class="profile clearfix">
-            <div class="profile_pic">
-              <img src="images/img.jpg" alt="..." class="img-circle profile_img">
-            </div>
-            <div class="profile_info">
-              <span>Welcome,</span>
-              <h2>kiki patek</h2>
+            <div class="navbar nav_title" style="border: 0;">
+              <a class="site_title"><span>welcome</span></a>
             </div>
           </div>
           <!-- /menu profile quick info -->
@@ -58,18 +60,18 @@
 
           <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
             <div class="menu_section">
-              </ul>
-            </div>
-            <div class="menu_section">
               <h3>MENU</h3>
               <ul class="nav side-menu">
-                <li><a><i class="fa fa-bug"></i> pretes <span class="fa fa-chevron-down"></span></a>
+                <li><a><i class="fa fa-bug"></i> PRETEST <span class="fa fa-chevron-down"></span></a>
                   <ul class="nav child_menu">
-
                     <li><a href="soal">soal</a></li>
-                    <li><a href="index2.html">modul</a></li>
-                    <li><a href="index3.html">nilai</a></li>
-
+                  </ul>
+                </li>
+              </ul>
+              <ul class="nav side-menu">
+                <li><a><i class="fa fa-bug"></i> NILAI <span class="fa fa-chevron-down"></span></a>
+                  <ul class="nav child_menu">
+                    <li><a href="data_nilai">data nilai</a></li>
                   </ul>
                 </li>
               </ul>
@@ -261,6 +263,11 @@
       <!-- Custom Theme Scripts -->
       <script src="{{asset('assets/build/js/custom.min.js') }}"></script>
 
+      <script>
+        $(document).ready(function() {
+          $('#table1').DataTable()
+        })
+      </script>
 </body>
 
 </html>

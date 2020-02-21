@@ -9,8 +9,8 @@
         $angka = 1;
         @endphp
         @foreach($soal as $s)
-        <form name="form1" method="post" action="jawab.php">
-            <input type="hidden" name="id[]" value="{{$s->id}}">
+        <form name="form1" method="post" action="submitjawab">
+
             <input type="hidden" name="jumlah" value="{{$s->jumlah}}">
             <tr>
                 <td width="17">

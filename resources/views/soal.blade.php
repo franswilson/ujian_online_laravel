@@ -9,8 +9,8 @@
         $angka = 1;
         @endphp
         @foreach($soal as $s)
-        <form name="form1" method="post" action="submitjawab">
-
+        <form name="form1" method="post" action="{{ route('jawab.store') }}">
+            @csrf
             <input type="hidden" name="jumlah" value="{{$s->jumlah}}">
             <tr>
                 <td width="17">
@@ -32,7 +32,7 @@
                 </td>
                 <td>
                     <font color="#000000">
-                        A. <input name="pilihan{{$s->id}}" type="radio" value="A">
+                        A. <input name="pilihan[{{ $s->id_soal }}]" type="radio" value="a">
                         {{$s->a}}</font>
                 </td>
             </tr>
@@ -42,7 +42,7 @@
                 </td>
                 <td>
                     <font color="#000000">
-                        B. <input name="pilihan{{$s->id}}" type="radio" value="B">
+                        B. <input name="pilihan[{{ $s->id_soal }}]" type="radio" value="b">
                         {{$s->b}}</font>
                 </td>
             </tr>
@@ -52,7 +52,7 @@
                 </td>
                 <td>
                     <font color="#000000">
-                        C. <input name="pilihan{{$s->id}}" type="radio" value="C">
+                        C. <input name="pilihan[{{ $s->id_soal }}]" type="radio" value="c">
                         {{$s->c}}</font>
                 </td>
             </tr>
@@ -62,7 +62,7 @@
                 </td>
                 <td>
                     <font color="#000000">
-                        D. <input name="pilihan[{{$s->id}}]" type="radio" value="D">
+                        D. <input name="pilihan[{{ $s->id_soal }}]" type="radio" value="d">
                         {{$s->d}}</font>
                 </td>
             </tr>
